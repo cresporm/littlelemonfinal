@@ -1,10 +1,17 @@
-import Logo from './logo.svg';
+import Logo from './Logo.svg';
 import Nav from './Nav';
+
 function Header(){
     return(
-        <header className="App-header">
-            <img src={Logo} className="AppLogo" alt="logo" />
-            <Nav />
+        <header className="Header">
+            <div className="container">
+                <a href="#home" className="Logo">
+                    <img src={Logo}  alt="logo" />
+                </a>
+
+                <Nav />
+            </div>
+
         </header>
     );
 }

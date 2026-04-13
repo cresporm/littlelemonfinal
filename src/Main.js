@@ -1,8 +1,16 @@
+import Hero from './Hero';
+import Specials from './Specials';
+import Testimonials from './Testimonials';
+import Info from './Info';
+
 function Main(){
     return(
-        <main>
-            <h1>Welcome to little lemmon</h1>
-        </main>
+        <div>
+            <Hero/>
+            <Specials />
+            <Testimonials />
+            <Info />
+        </div>
     );
 
 }

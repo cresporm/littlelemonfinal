@@ -1,13 +1,264 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif
+}
+img{
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul {
+  list-style: none;
 }
+.container{
+  width:  min(100%, 1100px);
+  margin: 0 auto;
+}
+
+.Header{
+  background: white;
+  padding: 0 180px;
+}
+.Header .container{
+  display: flex ;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+
+}
+.Logo img{
+  height: 51px;
+  width:auto;
+}
+
+
+.Nav ul{
+
+  display: flex;
+  align-items: center;
+  gap:28px;
+}
+.Nav a {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+}
+
+.hero {
+  background: #495E57;
+  padding:40px 0 80px;
+  position: relative;
+
+}
+.HeroContent{
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  align-items: start;
+  gap: 48px;
+}
+.HeroText{
+  max-width: 420px;
+
+}
+.HeroText h1{
+  font-size: 64px;
+  color:#F4CE14;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.HeroText h2{
+  font-size: 48px;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.HeroText p{
+  font-size: 18px;
+  color: white;
+  max-width:280px;
+  margin-bottom: 20px;
+}
+
+.Hero-image{
+  justify-self:end;
+  transform:translateY(20px);
+  width: 380px;
+  height:420px;
+  object-fit:cover;
+  border-radius:16px;
+}
+.hero-button{
+  background-color: #F4CE14;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.Specials{
+  padding: 120px 0 80px;
+  background:white;
+}
+.SpecialsHeader{
+
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  gap: 20px;
+  margin-bottom: 48px;
+}
+.SpecialsHeader h2{
+  font-size: 48px;
+  color:#111;
+  font-weight: 700;
+}
+.SpecialDishes{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+.Special{
+  background:#EDEFEE;
+  border-radius: 16px;
+  display:flex;
+  flex-direction: column ;
+  min-height: 460px;
+
+}
+.Special img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:16px 16px 0 0;
+}
+.SpecialDetails{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+.SpecialsHeader{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  gap: 70px;
+}
+.SpecialDetails  h3 {
+  font-size: 24px;
+  color:#111;
+  font-weight: 700;
+  margin-bottom: 10px;
+
+}
+.SpecialDetails  .precio {
+  font-size: 18px;
+  color:#ee9972;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.SpecialDetails p {
+  color: #495057;
+  font-size: 16px;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 28px;
+}
+.SpecialDetails a {
+  font-weight: 700;
+  color: #111;
+}
+.Testimonials{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: darkgrey;
+  position: relative;
+}
+.TestimonialsContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 80px 0;
+}
+.Reviews{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.Testimonial{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+    padding: 10px;
+  margin-right: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+}
+.Testimonial > #user{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+
+}
+.Info{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.Info >#description{
+
+  display:flex;
+  flex-direction:column;
+  align-items: left;
+  padding: 10px;
+  max-width: 300px;
+}
+.Footer{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  margin: 10px;
+}
+.FooterLink{
+  display:flex;
+  flex-direction:column;
+  align-items:left;
+}
+.LittleButton{
+  background-color: #F4CE14;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
