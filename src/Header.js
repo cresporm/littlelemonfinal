@@ -1,6 +1,8 @@
 import Logo from './Logo.svg';
+import {Link} from 'react-router-dom';
 
-function Header({chPage}){
+
+function Header(){
     return(
         <header className="Header">
             <div className="container">
@@ -8,18 +10,8 @@ function Header({chPage}){
                     <img src={Logo}  alt="logo" />
                 </a>
                 <nav className="Nav">
-                    <ul >
-                        <button
-                            onClick={()=>chPage('main')}
-                        >Home</button>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <button
-                            onClick={()=>chPage('booking')}
-                        >Reservations</button>
-                        <li><a href="#order">Order Online</a></li>
-                        <li><a href="#login">Login</a></li>
-                    </ul>
+                    <Link to='/Main'>Home</Link>
+                    <Link to='/BookingPage'>Booking</Link>
                 </nav>
             </div>
 

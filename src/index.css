@@ -275,4 +275,14 @@ form div{
   flex-direction: column;
   gap: 5px;
 }
+.confirmationMain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 
+}
+.details{
+  color: #495E57;
+}

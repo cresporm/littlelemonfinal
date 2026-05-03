@@ -1,8 +1,10 @@
 import {useReducer, useEffect} from "react";
 import BookingForm from "./BookingForm";
-import { fetchAPI } from "./api";
+import { fetchAPI, submitAPI } from "./api";
+import {useNavigate} from "react-router-dom";
 
-export const updateTimes =(selected)=>{
+
+const updateTimes =(selected)=>{
 
         const newDate = fetchAPI(selected);
         return newDate;
@@ -23,8 +25,10 @@ const reducer =(state, action)=>{
 
 }
 
+
 function BookingPage(){
 
+    const navigate = useNavigate();
 
     const initializeTimes = ()=>{
 
@@ -32,14 +36,31 @@ function BookingPage(){
         return fetchAPI(today);
 
     };
+    const submitForm= (formData)=>{
+
+        const response =submitAPI(formData)
+        if(response){
+
+            navigate('/ConfirmedBooking', {
+                replace:true,
+                state: formData,
+            });
+        }
+        console.log(response);
+    }
+
     const initialState = initializeTimes();
 
     const [state, dispatch] = useReducer(reducer, initialState);
 
     return (
         <section>
-            <h1>Make your reservation</h1>
-            <BookingForm state={state} dispatch={dispatch}/>
+           <div>
+                <h1>Make your reservation</h1>
+                <BookingForm state={state} dispatch={dispatch} submit={submitForm}/>
+
+           </div>
+
         </section>
     );
 }

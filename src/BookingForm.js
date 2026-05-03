@@ -1,33 +1,34 @@
 import {useState} from 'react';
 
 
-
-function BookingForm({state, dispatch}){
-
+function BookingForm({state, dispatch, submit}){
+	
 	const [date,setDate]=useState('');
 	const [time,setTime]=useState('');
 	const [guests,setGuests]=useState('');
 	const [occasion,setOccasion]=useState('');
 
-
+	//for cleaning the form
 	const clearForm=()=>{
 		setDate('');
 		setTime('');
 		setGuests("");
 		setOccasion("");
 	}
+	//change on the selected date
 	const handleChange=(e)=>{
 		const selectedDate = e.target.value;
 		setDate(selectedDate);
-
 		const dateObject  = new Date(selectedDate);
 		dispatch( {type:'UPDATE_TIMES', payload: dateObject} );
-		
 	}
-
+	//options for submission
 	const handleSubmit =(e) =>{
 		e.preventDefault();
 		clearForm();
+		const data = {date,time,guests,occasion};
+		submit(data);
+
 	}
 
     return(

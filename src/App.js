@@ -1,38 +1,30 @@
 
 import './App.css';
-import { useEffect, useState } from 'react';
-import BookingPage from './BookingPage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
+import ConfirmedBooking from './ConfirmedBooking';
+import BookingPage from './BookingPage';
 
 function App() {
 
-  const [page, setPage] = useState('main');
-
-  const renderPage=()=>{
-
-    switch(page){
-      case 'main':
-        return <Main />;
-      case 'booking':
-        return <BookingPage />;
-      default:
-        return <Main />;
-    }
-  }
 
   return(
-     <>
-      <Header
-        chPage={setPage}
-      />
-      {renderPage()}
-      <Footer />
-    </>
+     <BrowserRouter>
+      <Header />
+      <main>
+            <Routes>
+                <Route path="/" element={<Main />}/>
+                <Route path="/Main" element={<Main />}/>
+                <Route path="/BookingPage" element={<BookingPage />}/>
+                <Route path="/ConfirmedBooking" element={<ConfirmedBooking />}/>
+            </Routes>
+      </main>
+     <Footer />
+    </BrowserRouter>
 
   )
-   
 }
 
 export default App;
