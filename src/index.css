@@ -261,4 +261,18 @@ ul {
   margin-top: 10px;
   cursor: pointer;
 }
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  margin: 5px auto;
+  padding: 20px;
+  border: 1px solid #cccccc;
+}
+form div{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 

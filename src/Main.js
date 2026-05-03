@@ -3,7 +3,9 @@ import Specials from './Specials';
 import Testimonials from './Testimonials';
 import Info from './Info';
 
+
 function Main(){
+
     return(
         <div>
             <Hero/>
