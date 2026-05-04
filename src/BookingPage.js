@@ -4,7 +4,7 @@ import { fetchAPI, submitAPI } from "./api";
 import {useNavigate} from "react-router-dom";
 
 
-const updateTimes =(selected)=>{
+export const updateTimes =(selected)=>{
 
         const newDate = fetchAPI(selected);
         return newDate;
@@ -24,18 +24,19 @@ const reducer =(state, action)=>{
     }
 
 }
-
-
-function BookingPage(){
-
-    const navigate = useNavigate();
-
-    const initializeTimes = ()=>{
+    export const initializeTimes = ()=>{
 
         const today = new Date();
         return fetchAPI(today);
 
     };
+
+function BookingPage(){
+
+    const navigate = useNavigate();
+
+
+
     const submitForm= (formData)=>{
 
         const response =submitAPI(formData)
@@ -47,7 +48,7 @@ function BookingPage(){
             });
         }
         console.log(response);
-    }
+    };
 
     const initialState = initializeTimes();
 
@@ -58,7 +59,6 @@ function BookingPage(){
            <div>
                 <h1>Make your reservation</h1>
                 <BookingForm state={state} dispatch={dispatch} submit={submitForm}/>
-
            </div>
 
         </section>

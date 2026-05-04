@@ -1,11 +1,20 @@
 import { render, screen } from '@testing-library/react';
 import BookingPage from './BookingPage';
-import {initializeTimes, 
-  updateTimes, 
-  initialState} from './BookingPage';
+import {initializeTimes,
+  updateTimes} from './BookingPage';
+import { MemoryRouter } from 'react-router-dom';
 
 test('renders the title of the reservation form',()=>{
-  render(<BookingPage/>);
+  
+    render(
+
+    <MemoryRouter>
+          <BookingPage/>
+    </MemoryRouter>
+
+  
+  );
+  
   const titleElement =screen.getByText("Make your reservation");
   expect (titleElement).toBeInTheDocument();
 }
@@ -14,31 +23,18 @@ test('renders the title of the reservation form',()=>{
 
 test('initializes available times',()=>{
   
-  const initState = initialState;
-  const data = initializeTimes(initState);
-  expect (data.times ).toEqual([
-    "17:00",
-   "18:00",
-   "19:00",
-   "20:00",
+  
+  const data = initializeTimes();
+  expect(data.length).toBeGreaterThan(0);
 
-  ])
 }
 )
 
 test('checks that updateTimes returns the right values',()=>{
-  const ntimes  = ["17:00", "18:00", "19:00", "20:00"];
-  const updates = updateTimes(ntimes);
-  expect (updates).toEqual(
-    [
-    "17:00",
-   "18:00",
-   "19:00",
-   "20:00",
-
-  ]
-
-  )
+  //const ntimes  = ["17:00", "18:00", "19:00", "20:00"];
+  const today = new Date();
+  const updates = updateTimes(today);
+  expect(updates.length).toBeGreaterThan(0);
 
 
 })

@@ -13,6 +13,13 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "^react-router-dom$": "<rootDir>/node_modules/react-router-dom/dist/index.js",
+      "^react-router$": "<rootDir>/node_modules/react-router/dist/development/index.js",
+      "^react-router/dom$": "<rootDir>/node_modules/react-router/dist/development/dom-export.js"
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -25,6 +32,7 @@
       "react-app/jest"
     ]
   },
+
   "browserslist": {
     "production": [
       ">0.2%",
