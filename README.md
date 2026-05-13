@@ -4,6 +4,23 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Guide: Setting Up this React Project from GitHub
+
+## 1. Clone the Repository
+First, you need to copy the project from GitHub to your local machine. Open your terminal or Command Prompt and run:
+git clone <this-repository-url>
+
+Note: Replace <repository-url> with the link found under the green "Code" button on the GitHub page.
+
+## 2. Open the Project in VS Code
+Navigate into the project folder and open it with Visual Studio Code:
+cd <project-folder-name>
+code .
+
+##3. Install Dependencies
+You must install the required packages locally:
+### `npm install`
+
 ## Available Scripts
 
 In the project directory, you can run:
