@@ -4,7 +4,7 @@ import Lemondessert from "./lemondessert.jpg";
 import Bruschetta from "./bruchetta.svg";
 
 function Specials(){
-
+     //We use specials so we can  iterate for each card
     const specials =
     [
         {
@@ -34,7 +34,10 @@ function Specials(){
                     <button className="LittleButton">Online Menu</button>
                 </div>
                 <div className="SpecialDishes">
+                    {/*Iterations comes from the previous variable specials*/}
                     {specials.map((special) => (
+
+                        //We use the Special component, the child here, which represents each card
                         <Special
                             key={special.name}
                             name={special.name}

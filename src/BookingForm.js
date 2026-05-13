@@ -4,7 +4,6 @@
 function BookingForm({date, time, isValid, guests, occasion, actions}){
 
 
-
     return(
         <form onSubmit={actions.handleSubmit} onChange={actions.handleFormChange}>
 			<div>

@@ -4,6 +4,8 @@
 function Special(props){
 
     return(
+
+        //We recieve the information via props
         <div className="Special">
             <img src={props.image} alt="Special dish" width="200" />
 
@@ -14,9 +16,7 @@ function Special(props){
                 </div>
                 <p >{props.description}</p>
                     <a href="#main">Order a delivery  🛵</a>
-                   
-            
-                
+
             </div>
 
         </div>

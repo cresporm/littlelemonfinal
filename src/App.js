@@ -12,8 +12,10 @@ function App() {
 
   return(
      <BrowserRouter>
+      {/*We use three main components, Header, Main and Footer*/}
       <Header />
       <main>
+        {/*We declare some routes therefore we can use Link*/}
             <Routes>
                 <Route path="/" element={<Main />}/>
                 <Route path="/Main" element={<Main />}/>

@@ -8,6 +8,7 @@ function Main(){
 
     return(
         <div>
+             {/*Main component is divided in four subsections*/}
             <Hero/>
             <Specials />
             <Testimonials />
