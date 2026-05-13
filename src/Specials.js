@@ -17,7 +17,7 @@ function Specials(){
             name: "Bruschetta",
             description: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. Topped with a tomato mixture.",
             price: "$5.99",
-            image: Bruschetta
+            image: Bruschetta,
         },
         {
             name: "Lemon Dessert",

@@ -2,7 +2,7 @@ function Footer(){
     return(
         <footer className="container">
             <div className="Footer">
-                           <img src="https://www.pngall.com/wp-content/uploads/5/Star-PNG-High-Quality-Image.png" alt="Rating" width="100" />
+                           
             <div className="FooterLink">
                 <h1>Doormat Navigation  </h1>
                 <p>Home</p>

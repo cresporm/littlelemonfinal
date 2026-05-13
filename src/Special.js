@@ -1,8 +1,11 @@
+
+
+
 function Special(props){
 
     return(
         <div className="Special">
-            <img src={props.image} alt="Special" width="200" />
+            <img src={props.image} alt="Special dish" width="200" />
 
             <div className="SpecialDetails">
                 <div className="SpecialsHeader">
@@ -10,7 +13,10 @@ function Special(props){
                     <p className="precio">{props.price}</p>
                 </div>
                 <p >{props.description}</p>
-                <a href="#order">Order a delivery</a>
+                    <a href="#main">Order a delivery  🛵</a>
+                   
+            
+                
             </div>
 
         </div>
