@@ -88,13 +88,12 @@ function BookingPage(){
 
         const response =submitAPI(formData)
         if(response){
-
+            //Redirects to this component, which shows the confirmation and the information of the reservation
             navigate('/ConfirmedBooking', {
                 replace:true,
                 state: formData,
             });
         }
-        console.log(response);
     };
 
     //Our reducer for updating the available times
