@@ -1,7 +1,7 @@
 
 
 
-function BookingForm({date, time, isValid, guests, occasion, actions}){
+function BookingForm({date, times, time, isValid, guests, occasion, actions}){
 
 
     return(
@@ -21,8 +21,8 @@ function BookingForm({date, time, isValid, guests, occasion, actions}){
 						/>
 				</div>
 				<div>
-					<label htmlFor="time">Choose Time
-
+					<label htmlFor="time">
+						Choose Time
 					</label>
 						<select
 							id="time"
@@ -31,7 +31,8 @@ function BookingForm({date, time, isValid, guests, occasion, actions}){
 							required
 						>
 							{
-								time.map((avTime,  indice)=>(
+								//This is where we map the available times to the options of the select, this is being updated by the reducer in the BookingPage component
+								times.map((avTime,  indice)=>(
 									<option key={indice}>{avTime}</option>
 								)
 

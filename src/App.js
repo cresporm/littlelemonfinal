@@ -12,7 +12,7 @@ function App() {
 
   return(
      <BrowserRouter>
-      {/*We use three main components, Header, Main and Footer*/}
+      {/*We use three main components, Header, main(Which has Main, BookingPage and ConfirmedBooking) and Footer*/}
       <Header />
       <main>
         {/*We declare some routes therefore we can use Link*/}

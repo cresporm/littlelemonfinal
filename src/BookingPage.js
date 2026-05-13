@@ -107,7 +107,8 @@ function BookingPage(){
 
                 {/*Form component using actions which contains all the functions used by the form*/}
                 <BookingForm
-                    time={availableTimes}
+                    times={availableTimes}
+                    time={time}
                     date={date}
                     actions={formActions}
                     isValid={isValid}
