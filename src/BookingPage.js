@@ -35,6 +35,8 @@ function BookingPage(){
     const [time,setTime]=useState('');
 	const [guests,setGuests]=useState('');
 	const [occasion,setOccasion]=useState('');
+    const [name, setName] = useState('');
+    const [email, setEmail] =useState('');
 
     //Clears the information from the form
 	const clearForm=()=>{
@@ -42,6 +44,8 @@ function BookingPage(){
 		setTime('');
 		setGuests("");
 		setOccasion("");
+        setName('');
+        setEmail('');
 	}
     //This variable is used for passing by the functions to the Form (child)
     const formActions = {
@@ -56,7 +60,7 @@ function BookingPage(){
         handleSubmit :(e) =>{
             e.preventDefault();
             clearForm();
-            const data = {date:date,time:time,guests:guests,occasion: occasion};
+            const data = {date:date,time:time,guests:guests,occasion: occasion, name:name, email:email};
             submitForm(data);
 
         },
@@ -71,6 +75,10 @@ function BookingPage(){
         sGuests: (e)=> {setGuests(e.target.value);},
 
         sOccasion: (e)=> {setOccasion(e.target.value);},
+
+        sName: (e)=>{setName(e.target.value);},
+
+        sEmail: (e)=>{setEmail(e.target.value);},
 
     }
 
@@ -101,21 +109,22 @@ function BookingPage(){
     const [availableTimes, dispatch] = useReducer(updateTimes, initialState);
 
     return (
-        <section>
-           <div className="bookingContainer">
+        <section className="container bookingContainer">
+           
                 <h1 className="bookingTitle">Reservation page</h1>
-                <p className="bookingDescription">Make your reservation, fill in the details</p>
+                <h2 className="bookingDescription">Make your reservation, fill in the details</h2>
 
                 {/*Form component using actions which contains all the functions used by the form*/}
                 <BookingForm
                     times={availableTimes}
                     time={time}
                     date={date}
+                    name={name}
+                    email={email}
                     actions={formActions}
                     isValid={isValid}
-                    className="bookingForm"
                 />
-           </div>
+   
 
         </section>
     );

@@ -284,35 +284,25 @@ ul {
 .LittleButton:hover{
   background-color: #ee9972;
 }
-form{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 400px;
-  margin: 5px auto;
-  padding: 20px;
-  border: 1px solid #cccccc;
-}
-form div{
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
+
 .confirmationMain{
+
+  width: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 50px;
+  color: #EDEFEE;
+  background-color: #495E57;
 
 }
-.details{
-  color: #495E57;
-}
+
 .bookingContainer{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  background-color: #495E57;
+  width:auto;
+  justify-content: center;
+  padding:40px;
 }
 .delivery{
   display: flex;
@@ -320,11 +310,64 @@ form div{
   align-items: space-between;
 }
 .bookingTitle{
-  margin: 30px;
+  color: #F4CE14;
 }
 .bookingDescription{
-  margin:30px;
+  color:#EDEFEE;
 }
 .bookingForm{
   width: 700px;
+}
+.NavElement{
+  padding: 3px;
+  border-radius: 2px;
+}
+.NavElement:hover{
+  color:#EDEFEE;
+  background-color: #495E57;
+}
+
+.formGeneral{
+  
+  display:flex;
+  flex-direction: column;
+  justify-self: center;
+  width: 75%;
+
+}
+.formGeneral label{
+  color:#EDEFEE;
+}
+
+.formRow{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  
+}
+.formRow > div{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px 20px 20px;
+}
+
+.formRow legend{
+  color: #F4CE14;
+  font-size: medium;
+  padding:10px;
+}
+.formBox{
+  width: 200px;
+  height: 50px;
+  border-color: #ee9972;
+  border-radius: 4px;
+  font-size: large;
+
+}
+
+.subBtn{
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: large;
+  background-color:#495E57;
 }
