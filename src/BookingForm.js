@@ -72,7 +72,7 @@ function BookingForm({date, times, time, isValid, guests, occasion, actions}){
 				</div>
 
 
-			<button aria-label="On Click" type="submit" disabled={!isValid}>Submit</button>
+			<button type="submit" disabled={!isValid}>Submit</button>
 			</div>
 
 </form>

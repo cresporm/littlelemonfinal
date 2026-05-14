@@ -3,6 +3,13 @@ import BookingForm from "./BookingForm";
 import { fetchAPI, submitAPI } from "./api";
 import {useNavigate} from "react-router-dom";
 
+const formatDate = (date) => date.toISOString().split("T")[0];
+
+const initializeTimes = () =>{
+    const today = new Date();
+    return fetchAPI(today);
+};
+
 //This function is the main functions use by the reducer
 const updateTimes =(availableTimes, action)=>{
 
@@ -22,7 +29,7 @@ function BookingPage(){
     //Navigate is used when the form is submitted, it redirects to the next page
     const navigate = useNavigate();
 
-    const [date, setDate] = useState(new Date());
+    const [date, setDate] = useState(formatDate(new Date()));
     const [dateObject, setDateObject] = useState(new Date());
 	const [isValid, setIsValid] = useState(false);
     const [time,setTime]=useState('');
@@ -66,12 +73,6 @@ function BookingPage(){
         sOccasion: (e)=> {setOccasion(e.target.value);},
 
     }
-
-    //First fetch just when we initialize the reducer
-    const initializeTimes = () =>{
-        const today = new Date();
-        return fetchAPI(today);
-        };
 
     //Saving the previous data in this variable
     const initialState = initializeTimes();
@@ -120,3 +121,4 @@ function BookingPage(){
     );
 }
 export default BookingPage;
+export { initializeTimes, updateTimes };

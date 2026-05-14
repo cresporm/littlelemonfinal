@@ -17,7 +17,7 @@ function Header(){
                         <Link className="NavElement" to='/Main'>Menu</Link>
                         <Link className="NavElement" to='/BookingPage'>Reservations</Link>
                         <Link className="NavElement" to='/BookingPage'>Order Online</Link>
-                        <Link className="NavElement" to='/BookingPage'>Login</Link>
+                        <Link className="NavElement" to='BookingPage'>Login</Link>
                     </div>
                 </nav>
             </div>
